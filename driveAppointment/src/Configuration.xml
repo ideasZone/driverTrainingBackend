@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 主要是配置实体类映射文件中的别名，其他内容都交给spring管理 -->
+<configuration>
+
+    <settings>
+        <!-- 启用全局映射器的缓存-->
+        <setting name="cacheEnabled" value="true"/>
+        <!-- 是否启用自动驼峰映射配置-->
+        <setting name="mapUnderscoreToCamelCase" value="false"/> 
+        <!-- 空值默认null来处理不需要全部指定jdbcType=VARCHAR -->
+        <setting name="jdbcTypeForNull" value="VARCHAR"/>
+        <!-- lazyLoadingEnabled：true使用延迟加载，false禁用延迟加载。 aggressiveLazyLoading：true启用时，当延迟加载开启时访问对象中一个懒对象属性时， 
+将完全加载这个对象的所有懒对象属性。 false，当延迟加载时，按需加载对象属性（即访问对象中一个懒对象属性，不会加载对象中其他的懒对象属性）。 
+默认为true  add by 柯典佑 如需修改，请事先通知-->
+        <setting name="lazyLoadingEnabled" value="true" />
+        
+    </settings>
+    <typeAliases>
+		<!-- 客户表 -->
+		<!-- <typeAlias alias="Customer" type="com.jzst.modul.Customer"/>
+		问题表
+		<typeAlias alias="Question" type="com.jzst.modul.Question"/> -->
+	</typeAliases>
+</configuration>
